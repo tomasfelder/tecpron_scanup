@@ -1,0 +1,69 @@
+type TecpronProject @model {
+  id: ID!
+  name: String!
+  startDate: String!
+  leicaScanningProjects: [LeicaScanningProject]
+    @connection(keyName: "TecpronProjectLeicaScanningProjects", fields: ["id"])
+}
+
+type Scanner @model {
+  id: ID!
+  name: String!
+}
+
+type LeicaScanningProject
+  @model
+  @key(
+    name: "TecpronProjectLeicaScanningProjects"
+    fields: ["tecpronProjectID", "id"]
+  ) {
+  id: ID!
+  name: String!
+  startDate: String!
+  scanner: ID!
+  tecpronProject: TecpronProject @connection(fields: ["tecpronProjectID"])
+  tecpronProjectID: ID!
+  stations: [Station]
+    @connection(keyName: "LeicaScanningProjectStations", fields: ["id"])
+}
+
+type Station
+  @model
+  @key(
+    name: "LeicaScanningProjectStations"
+    fields: ["leicaScanningProjectID", "id"]
+  ) {
+  id: ID!
+  stationNumber: Int!
+  date: String!
+  cancelled: Boolean!
+  notes: [ID!]
+  state: [ID!]
+  scannerConfiguration: ScannerConfiguration @connection
+  mapPoint: [Int!]
+  takenPictures: Int
+  voiceRecordings: Int
+  endOfRoutine: Boolean!
+  leicaScanningProject: LeicaScanningProject
+    @connection(fields: ["leicaScanningProjectID"])
+  leicaScanningProjectID: ID!
+}
+
+type Note @model {
+  id: ID!
+  name: String!
+}
+
+type State @model {
+  id: ID!
+  name: String!
+}
+
+type ScannerConfiguration @model {
+  id: ID!
+  location: String!
+  resolution: String!
+  camera: Boolean!
+  doubleScan: Boolean!
+  battery: Int
+}
