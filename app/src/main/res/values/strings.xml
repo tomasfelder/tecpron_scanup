@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ScanUp</string>
+    <string name="resolution_1">Baja</string>
+    <string name="resolution_2">Media</string>
+    <string name="resolution_3">Alta</string>
+    <string name="location_1">Exterior</string>
+    <string name="location_2">Interior</string>
+    <string name="location_3">Compleja</string>
+</resources>

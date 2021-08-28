@@ -1,0 +1,664 @@
+# this is an auto generated file. This will be overwritten
+query SyncTecpronProjects(
+  $filter: ModelTecpronProjectFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncTecpronProjects(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetTecpronProject($id: ID!) {
+  getTecpronProject(id: $id) {
+    id
+    name
+    startDate
+    leicaScanningProject {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListTecpronProjects(
+  $filter: ModelTecpronProjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTecpronProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncLeicaScanningProjects(
+  $filter: ModelLeicaScanningProjectFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncLeicaScanningProjects(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetLeicaScanningProject($id: ID!) {
+  getLeicaScanningProject(id: $id) {
+    id
+    name
+    startDate
+    scanner {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    tecpronProject {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    stations {
+      items {
+        id
+        stationNumber
+        date
+        cancelled
+        notes
+        state
+        mapPoint
+        battery
+        takenPictures
+        voiceRecordings
+        endOfRoutine
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListLeicaScanningProjects(
+  $filter: ModelLeicaScanningProjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listLeicaScanningProjects(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncStations(
+  $filter: ModelStationFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncStations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      stationNumber
+      date
+      cancelled
+      notes
+      state
+      scannerConfiguration {
+        id
+        location
+        resolution
+        camera
+        doubleScan
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      mapPoint
+      battery
+      takenPictures
+      voiceRecordings
+      endOfRoutine
+      leicaScanningProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetStation($id: ID!) {
+  getStation(id: $id) {
+    id
+    stationNumber
+    date
+    cancelled
+    notes
+    state
+    scannerConfiguration {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    mapPoint
+    battery
+    takenPictures
+    voiceRecordings
+    endOfRoutine
+    leicaScanningProject {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListStations(
+  $filter: ModelStationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      stationNumber
+      date
+      cancelled
+      notes
+      state
+      scannerConfiguration {
+        id
+        location
+        resolution
+        camera
+        doubleScan
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      mapPoint
+      battery
+      takenPictures
+      voiceRecordings
+      endOfRoutine
+      leicaScanningProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncNotes(
+  $filter: ModelNoteFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncNotes(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetNote($id: ID!) {
+  getNote(id: $id) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListNotes(
+  $filter: ModelNoteFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listNotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncStates(
+  $filter: ModelStateFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncStates(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetState($id: ID!) {
+  getState(id: $id) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListStates(
+  $filter: ModelStateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStates(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncScannerConfigurations(
+  $filter: ModelScannerConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncScannerConfigurations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetScannerConfiguration($id: ID!) {
+  getScannerConfiguration(id: $id) {
+    id
+    location
+    resolution
+    camera
+    doubleScan
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListScannerConfigurations(
+  $filter: ModelScannerConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listScannerConfigurations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncScanners(
+  $filter: ModelScannerFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncScanners(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetScanner($id: ID!) {
+  getScanner(id: $id) {
+    id
+    name
+    leicaScanningProjects {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListScanners(
+  $filter: ModelScannerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listScanners(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}

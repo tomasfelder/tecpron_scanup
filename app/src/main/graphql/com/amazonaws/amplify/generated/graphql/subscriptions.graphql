@@ -1,0 +1,640 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateTecpronProject {
+  onCreateTecpronProject {
+    id
+    name
+    startDate
+    leicaScanningProject {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateTecpronProject {
+  onUpdateTecpronProject {
+    id
+    name
+    startDate
+    leicaScanningProject {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteTecpronProject {
+  onDeleteTecpronProject {
+    id
+    name
+    startDate
+    leicaScanningProject {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateLeicaScanningProject {
+  onCreateLeicaScanningProject {
+    id
+    name
+    startDate
+    scanner {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    tecpronProject {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    stations {
+      items {
+        id
+        stationNumber
+        date
+        cancelled
+        notes
+        state
+        mapPoint
+        battery
+        takenPictures
+        voiceRecordings
+        endOfRoutine
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateLeicaScanningProject {
+  onUpdateLeicaScanningProject {
+    id
+    name
+    startDate
+    scanner {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    tecpronProject {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    stations {
+      items {
+        id
+        stationNumber
+        date
+        cancelled
+        notes
+        state
+        mapPoint
+        battery
+        takenPictures
+        voiceRecordings
+        endOfRoutine
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteLeicaScanningProject {
+  onDeleteLeicaScanningProject {
+    id
+    name
+    startDate
+    scanner {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    tecpronProject {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    stations {
+      items {
+        id
+        stationNumber
+        date
+        cancelled
+        notes
+        state
+        mapPoint
+        battery
+        takenPictures
+        voiceRecordings
+        endOfRoutine
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateStation {
+  onCreateStation {
+    id
+    stationNumber
+    date
+    cancelled
+    notes
+    state
+    scannerConfiguration {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    mapPoint
+    battery
+    takenPictures
+    voiceRecordings
+    endOfRoutine
+    leicaScanningProject {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateStation {
+  onUpdateStation {
+    id
+    stationNumber
+    date
+    cancelled
+    notes
+    state
+    scannerConfiguration {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    mapPoint
+    battery
+    takenPictures
+    voiceRecordings
+    endOfRoutine
+    leicaScanningProject {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteStation {
+  onDeleteStation {
+    id
+    stationNumber
+    date
+    cancelled
+    notes
+    state
+    scannerConfiguration {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    mapPoint
+    battery
+    takenPictures
+    voiceRecordings
+    endOfRoutine
+    leicaScanningProject {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateNote {
+  onCreateNote {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateNote {
+  onUpdateNote {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteNote {
+  onDeleteNote {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateState {
+  onCreateState {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateState {
+  onUpdateState {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteState {
+  onDeleteState {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateScannerConfiguration {
+  onCreateScannerConfiguration {
+    id
+    location
+    resolution
+    camera
+    doubleScan
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateScannerConfiguration {
+  onUpdateScannerConfiguration {
+    id
+    location
+    resolution
+    camera
+    doubleScan
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteScannerConfiguration {
+  onDeleteScannerConfiguration {
+    id
+    location
+    resolution
+    camera
+    doubleScan
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateScanner {
+  onCreateScanner {
+    id
+    name
+    leicaScanningProjects {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateScanner {
+  onUpdateScanner {
+    id
+    name
+    leicaScanningProjects {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteScanner {
+  onDeleteScanner {
+    id
+    name
+    leicaScanningProjects {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}

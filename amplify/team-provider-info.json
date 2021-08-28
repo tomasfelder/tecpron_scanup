@@ -1,0 +1,15 @@
+{
+    "mobileapi": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-tecpronscanning-mobileapi-184122-authRole",
+            "UnauthRoleArn": "arn:aws:iam::385033651691:role/amplify-tecpronscanning-mobileapi-184122-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::385033651691:role/amplify-tecpronscanning-mobileapi-184122-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-tecpronscanning-mobileapi-184122-deployment",
+            "UnauthRoleName": "amplify-tecpronscanning-mobileapi-184122-unauthRole",
+            "StackName": "amplify-tecpronscanning-mobileapi-184122",
+            "StackId": "arn:aws:cloudformation:us-east-1:385033651691:stack/amplify-tecpronscanning-mobileapi-184122/7613d450-b663-11ea-9ad5-0ed24b955b13",
+            "AmplifyAppId": "d3khjn6yp38uwy"
+        }
+    }
+}

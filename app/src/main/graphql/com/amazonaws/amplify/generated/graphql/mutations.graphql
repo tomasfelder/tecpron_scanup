@@ -1,0 +1,703 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateTecpronProject(
+  $input: CreateTecpronProjectInput!
+  $condition: ModelTecpronProjectConditionInput
+) {
+  createTecpronProject(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    leicaScanningProject {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateTecpronProject(
+  $input: UpdateTecpronProjectInput!
+  $condition: ModelTecpronProjectConditionInput
+) {
+  updateTecpronProject(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    leicaScanningProject {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteTecpronProject(
+  $input: DeleteTecpronProjectInput!
+  $condition: ModelTecpronProjectConditionInput
+) {
+  deleteTecpronProject(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    leicaScanningProject {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateLeicaScanningProject(
+  $input: CreateLeicaScanningProjectInput!
+  $condition: ModelLeicaScanningProjectConditionInput
+) {
+  createLeicaScanningProject(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    scanner {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    tecpronProject {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    stations {
+      items {
+        id
+        stationNumber
+        date
+        cancelled
+        notes
+        state
+        mapPoint
+        battery
+        takenPictures
+        voiceRecordings
+        endOfRoutine
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateLeicaScanningProject(
+  $input: UpdateLeicaScanningProjectInput!
+  $condition: ModelLeicaScanningProjectConditionInput
+) {
+  updateLeicaScanningProject(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    scanner {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    tecpronProject {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    stations {
+      items {
+        id
+        stationNumber
+        date
+        cancelled
+        notes
+        state
+        mapPoint
+        battery
+        takenPictures
+        voiceRecordings
+        endOfRoutine
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteLeicaScanningProject(
+  $input: DeleteLeicaScanningProjectInput!
+  $condition: ModelLeicaScanningProjectConditionInput
+) {
+  deleteLeicaScanningProject(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    scanner {
+      id
+      name
+      leicaScanningProjects {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    tecpronProject {
+      id
+      name
+      startDate
+      leicaScanningProject {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    stations {
+      items {
+        id
+        stationNumber
+        date
+        cancelled
+        notes
+        state
+        mapPoint
+        battery
+        takenPictures
+        voiceRecordings
+        endOfRoutine
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateStation(
+  $input: CreateStationInput!
+  $condition: ModelStationConditionInput
+) {
+  createStation(input: $input, condition: $condition) {
+    id
+    stationNumber
+    date
+    cancelled
+    notes
+    state
+    scannerConfiguration {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    mapPoint
+    battery
+    takenPictures
+    voiceRecordings
+    endOfRoutine
+    leicaScanningProject {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateStation(
+  $input: UpdateStationInput!
+  $condition: ModelStationConditionInput
+) {
+  updateStation(input: $input, condition: $condition) {
+    id
+    stationNumber
+    date
+    cancelled
+    notes
+    state
+    scannerConfiguration {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    mapPoint
+    battery
+    takenPictures
+    voiceRecordings
+    endOfRoutine
+    leicaScanningProject {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteStation(
+  $input: DeleteStationInput!
+  $condition: ModelStationConditionInput
+) {
+  deleteStation(input: $input, condition: $condition) {
+    id
+    stationNumber
+    date
+    cancelled
+    notes
+    state
+    scannerConfiguration {
+      id
+      location
+      resolution
+      camera
+      doubleScan
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    mapPoint
+    battery
+    takenPictures
+    voiceRecordings
+    endOfRoutine
+    leicaScanningProject {
+      id
+      name
+      startDate
+      scanner {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      tecpronProject {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      stations {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateNote(
+  $input: CreateNoteInput!
+  $condition: ModelNoteConditionInput
+) {
+  createNote(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateNote(
+  $input: UpdateNoteInput!
+  $condition: ModelNoteConditionInput
+) {
+  updateNote(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteNote(
+  $input: DeleteNoteInput!
+  $condition: ModelNoteConditionInput
+) {
+  deleteNote(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateState(
+  $input: CreateStateInput!
+  $condition: ModelStateConditionInput
+) {
+  createState(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateState(
+  $input: UpdateStateInput!
+  $condition: ModelStateConditionInput
+) {
+  updateState(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteState(
+  $input: DeleteStateInput!
+  $condition: ModelStateConditionInput
+) {
+  deleteState(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateScannerConfiguration(
+  $input: CreateScannerConfigurationInput!
+  $condition: ModelScannerConfigurationConditionInput
+) {
+  createScannerConfiguration(input: $input, condition: $condition) {
+    id
+    location
+    resolution
+    camera
+    doubleScan
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateScannerConfiguration(
+  $input: UpdateScannerConfigurationInput!
+  $condition: ModelScannerConfigurationConditionInput
+) {
+  updateScannerConfiguration(input: $input, condition: $condition) {
+    id
+    location
+    resolution
+    camera
+    doubleScan
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteScannerConfiguration(
+  $input: DeleteScannerConfigurationInput!
+  $condition: ModelScannerConfigurationConditionInput
+) {
+  deleteScannerConfiguration(input: $input, condition: $condition) {
+    id
+    location
+    resolution
+    camera
+    doubleScan
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateScanner(
+  $input: CreateScannerInput!
+  $condition: ModelScannerConditionInput
+) {
+  createScanner(input: $input, condition: $condition) {
+    id
+    name
+    leicaScanningProjects {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateScanner(
+  $input: UpdateScannerInput!
+  $condition: ModelScannerConditionInput
+) {
+  updateScanner(input: $input, condition: $condition) {
+    id
+    name
+    leicaScanningProjects {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteScanner(
+  $input: DeleteScannerInput!
+  $condition: ModelScannerConditionInput
+) {
+  deleteScanner(input: $input, condition: $condition) {
+    id
+    name
+    leicaScanningProjects {
+      items {
+        id
+        name
+        startDate
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
